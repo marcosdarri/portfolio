@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,10 +17,23 @@ export default function Contact() {
     });
   };
 
+  const form = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    emailjs
+      .sendForm("service_rdskf38", "template_z8qvcv4", form.current, {
+        publicKey: "Y9SbeuNojb7Zc0OWU",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
 
     setFormData({
       full_name: "",
@@ -28,10 +43,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact min-h-screen flex justify-center" id="#contact">
+    <div className="contact h-full flex justify-center" id="#contact">
       <div className="">
         <h2 className="text-4xl font-bold p-5 pl-0">Get in contact</h2>
-        <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
+        <form
+          ref={form}
+          className="flex flex-col gap-2"
+          onSubmit={handleSubmit}
+        >
           <input
             type="text"
             name="full_name"
