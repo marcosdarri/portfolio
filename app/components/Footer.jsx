@@ -8,7 +8,9 @@ export default function Footer() {
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover">Home</a>
+        <a className="link link-hover" href="#home">
+          Home
+        </a>
         <a className="link link-hover">Portfolio</a>
         <a className="link link-hover">About</a>
         <a className="link link-hover">Contact</a>
@@ -23,7 +25,7 @@ export default function Footer() {
           <SocialMediaIcon
             src={gmail}
             alt="Gmail"
-            link="https://github.com/marcosdarri"
+            link="mailto:marcosdarri2019@gmail.com"
           />
           <SocialMediaIcon
             src={linkedin}
@@ -33,7 +35,7 @@ export default function Footer() {
           <SocialMediaIcon
             src={whatsapp}
             alt="Whatsapp"
-            link="https://github.com/marcosdarri"
+            link="https://wa.me/59891788790"
           />
         </div>
       </nav>

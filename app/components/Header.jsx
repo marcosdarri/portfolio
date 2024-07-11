@@ -1,3 +1,5 @@
+import ThemeController from "./ThemeController";
+
 export default function Header() {
   return (
     <div className="navbar bg-base-100 flex justify-between">
@@ -32,9 +34,14 @@ export default function Header() {
             <li>
               <a>Contact</a>
             </li>
+            <li className="pl-[10px] pt-[5px]">
+              <ThemeController />
+            </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Marcos Darricarrere</a>
+        <div>
+          <a className="btn btn-ghost text-xl">Marcos Darricarrere</a>
+        </div>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">
@@ -46,6 +53,9 @@ export default function Header() {
           </li>
           <li>
             <a>Contact</a>
+          </li>
+          <li>
+            <ThemeController />
           </li>
         </ul>
       </div>
