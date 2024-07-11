@@ -1,5 +1,4 @@
 import Image from "next/image";
-import cv_image from "../../public/cv_image.jpg";
 
 const Hero = () => {
   return (
