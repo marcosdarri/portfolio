@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact h-full flex justify-center" id="#contact">
+    <div className="contact h-full flex justify-center" id="contact">
       <div className="">
         <h2 className="text-4xl font-bold p-5 pl-0">Get in contact</h2>
         <form
@@ -71,7 +71,7 @@ export default function Contact() {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="textarea w-full max-w-xs"
+            className="textarea textarea-bordered w-full max-w-xs"
             placeholder="Type your message here..."
           ></textarea>
 
