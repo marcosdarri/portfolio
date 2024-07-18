@@ -11,9 +11,15 @@ export default function Footer() {
         <a className="link link-hover" href="#home">
           Home
         </a>
-        <a className="link link-hover">Portfolio</a>
-        <a className="link link-hover">About</a>
-        <a className="link link-hover">Contact</a>
+        <a className="link link-hover" href="#portfolio">
+          Portfolio
+        </a>
+        <a className="link link-hover" href="/about">
+          About
+        </a>
+        <a className="link link-hover" href="#contact">
+          Contact
+        </a>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
