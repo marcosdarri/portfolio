@@ -26,13 +26,13 @@ export default function Header() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li>
-              <a>About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="#contact">Contact</a>
             </li>
             <li className="pl-[10px] pt-[5px]">
               <ThemeController />
@@ -46,13 +46,13 @@ export default function Header() {
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a>About</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li>
             <ThemeController />
