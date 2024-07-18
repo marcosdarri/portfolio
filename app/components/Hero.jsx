@@ -10,8 +10,16 @@ const Hero = () => {
             Thank you for showing an interest in my portfolio. Click the buttons
             below to download my CV and know more about my projects.
           </p>
-          <button className="btn btn-primary">Download CV</button>
-          <button className="btn btn-primary ml-2">Go to Projects</button>
+          <a
+            className="btn btn-primary"
+            href="https://drive.google.com/uc?export=download&id=1JEcaQ2oYdBF0bs9AoCqqqcds16o0e6GL"
+            target="_blank"
+          >
+            Download CV
+          </a>
+          <a className="btn btn-primary ml-2" href="#portfolio">
+            Go to Portfolio
+          </a>
         </div>
       </div>
     </div>
