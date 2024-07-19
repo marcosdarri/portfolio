@@ -1,9 +1,38 @@
+"use client";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+
 export default function ThemeController() {
+  const { setTheme, resolvedTheme } = useTheme();
+  const [isChecked, setIsChecked] = useState();
+
+  useEffect(() => {
+    if (resolvedTheme === "dark") {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+  }, []);
+
+  const handleThemeChange = () => {
+    if (resolvedTheme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+    setIsChecked(!isChecked);
+  };
+
   return (
     <label className="swap swap-rotate p-0 w-[36px]">
       {/* this hidden checkbox controls the state */}
-      <input type="checkbox" className="theme-controller" value="synthwave" />
-
+      <input
+        type="checkbox"
+        className="theme-controller"
+        value="synthwave"
+        checked={isChecked}
+        onChange={handleThemeChange}
+      />
       {/* sun icon */}
       <svg
         className="swap-off h-[36px] w-[36px] fill-current"
