@@ -1,12 +1,12 @@
-import Image from "next/image";
-
 const Hero = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen" id="home">
+    <div className="hero bg-base-200 min-h-screen dark:bg-slate-800" id="home">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Welcome to my Portfolio!</h1>
-          <p className="py-6">
+          <h1 className="text-5xl font-bold dark:text-white">
+            Welcome to my Portfolio!
+          </h1>
+          <p className="py-6 dark:text-white">
             Thank you for showing an interest in my portfolio. Click the buttons
             below to download my CV and know more about my projects.
           </p>

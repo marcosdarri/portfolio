@@ -43,7 +43,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact h-full flex justify-center" id="contact">
+    <div
+      className="contact h-full flex justify-center py-20 dark:bg-slate-700 dark:text-white"
+      id="contact"
+    >
       <div className="">
         <h2 className="text-4xl font-bold p-5 pl-0">Get in contact</h2>
         <form
@@ -57,7 +60,8 @@ export default function Contact() {
             value={formData.nombre}
             onChange={handleChange}
             placeholder="Full name"
-            className="input input-bordered w-full max-w-xs"
+            required
+            className="input input-bordered w-full max-w-xs dark:bg-slate-600 dark:text-white"
           />
           <input
             type="email"
@@ -65,14 +69,16 @@ export default function Contact() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Email"
-            className="input input-bordered w-full max-w-xs"
+            required
+            className="input input-bordered w-full max-w-xs dark:bg-slate-600 dark:text-white"
           />
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="textarea textarea-bordered w-full max-w-xs"
+            className="textarea textarea-bordered w-full max-w-xs dark:bg-slate-600 dark:text-white"
             placeholder="Type your message here..."
+            required
           ></textarea>
 
           <button type="submit" className="btn btn-primary w-full max-w-xs">

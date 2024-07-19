@@ -6,7 +6,7 @@ import whatsapp from "../../public/whatsapp.svg";
 
 export default function Footer() {
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 dark:text-slate-400 dark:bg-teal-900">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover" href="#home">
           Home
@@ -36,7 +36,7 @@ export default function Footer() {
           <SocialMediaIcon
             src={linkedin}
             alt="LinkedIn"
-            link="https://github.com/marcosdarri"
+            link="https://www.linkedin.com/in/marcos-darricarrere/"
           />
           <SocialMediaIcon
             src={whatsapp}
